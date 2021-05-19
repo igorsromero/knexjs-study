@@ -1,0 +1,23 @@
+{
+  "name": "knexjs-study",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igorsromero/knexjs-study.git"
+  },
+  "author": "Igor Solfa Romero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igorsromero/knexjs-study/issues"
+  },
+  "homepage": "https://github.com/igorsromero/knexjs-study#readme",
+  "dependencies": {
+    "knex": "^0.95.6",
+    "mysql2": "^2.2.5"
+  }
+}
