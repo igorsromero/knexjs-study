@@ -7,3 +7,5 @@ const knex = require('knex')({
         database: 'knexjs'
     }
 });
+
+module.exports = knex;
