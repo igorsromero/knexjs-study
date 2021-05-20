@@ -69,9 +69,19 @@ database.raw("SELECT * FROM games").then(d => {
 });
 */
 
+// FUNCTION TO DELETE A DATA BY ID
+function deleteByID(id) {
+    database.where({ id: id }).table("games").delete().then(d => {
+        console.log(d);
+    }).catch(err => {
+        console.log(err);
+    })
+}
+
 
 
 // insertData(dados); // INSERT DATA
 // selectData(); // SELECT ALL DATA
 // nestedQueries(dados); // INSERT AND SELECT ALL DATA
 // selectDataWhere(); // SELECT DATA WITH WHERE
+deleteByID(2); // DELETE BY ID
