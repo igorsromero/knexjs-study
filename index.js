@@ -96,6 +96,19 @@ function selectOrderBy() {
     })
 }
 
+// FUNCTION INSER WITH A TRANSACTION (ASYNC, AWAIT)
+async function Transacao() {
+    try {
+        await database.transaction(async trans => {
+            await database.insert({ nome: "Teste" }).table("games");
+            await database.insert({ nome: "Teste1" }).table("games");
+            await database.insert({ nome: "Teste2" }).table("games");
+        })
+    } catch (err) {
+        console.log(err);
+    }
+}
+
 // insertData(dados); // INSERT DATA
 // selectData(); // SELECT ALL DATA
 // nestedQueries(dados); // INSERT AND SELECT ALL DATA
