@@ -78,10 +78,28 @@ function deleteByID(id) {
     })
 }
 
+// FUNCTION TO UPDATE A DATA BY ID
+function updateByID(id, price) {
+    database.where({ id: id }).table("games").update({ price: price }).then(d => {
+        console.log(d);
+    }).catch(err => {
+        console.log(err);
+    })
+}
 
+// FUNCTION TO SELECT ALL DATA ORDENED BY PRICE, DESC
+function selectOrderBy() {
+    database.select().table("games").orderBy("price", "desc").then(d => {
+        console.log(d);
+    }).catch(err => {
+        console.log(err);
+    })
+}
 
 // insertData(dados); // INSERT DATA
 // selectData(); // SELECT ALL DATA
 // nestedQueries(dados); // INSERT AND SELECT ALL DATA
 // selectDataWhere(); // SELECT DATA WITH WHERE
-deleteByID(2); // DELETE BY ID
+// deleteByID(2); // DELETE BY ID
+// updateByID(1, 30); // UPDATE ID 1, SET PRICE 30
+// selectOrderBy(); // ORDENED SELECT
